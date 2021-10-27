@@ -1,0 +1,1 @@
+A rock paper sissors game that plays against AI in a competition style, gaining points with the goal to win
