@@ -1,6 +1,7 @@
 #Camden Levy and John Castilloux
 import random
 
+
 print("Rock Paper Scissors game\nCompete against the AI and gain score ")
 print("-----------------------------------------------------------------")
 print("To play competitive Rock Paper Scissors, you must type Play to continue.")
@@ -82,6 +83,17 @@ elif rpc == "scissors" and random_ai() == "paper":
     print("the computer chose paper")
     print("You win")
 
+# player_score += 1
+
+def scores():
+    player_score = 0
+    ai_score = 0
+    if player_score > ai_score:
+        print("winning")
+    elif ai_score > player_score:
+        print("losing")
+    elif ai_score == player_score:
+        print("equal")
 
 
 
