@@ -1,3 +1,6 @@
+#Camden Levy and John Castilloux
+import random
+
 print("Rock Paper Scissors game\nCompete against the AI and gain score ")
 print("-----------------------------------------------------------------")
 print("To play competitive Rock Paper Scissors, you must type Play to continue.")
@@ -31,23 +34,61 @@ elif inputInGame.lower() == "scissors" or inputInGame.lower() == "s":
     rpc = "scissors"
 else:
     quit()
-#
-# if rpc == 1:
-#     inGameRPC = "rock"
-# elif rpc == 2:
-#     inGameRPC = "paper"
-# elif rpc == 3:
-#     inGameRPC = "scissors"
-# else:
-#     quit()
-#
-# print(inGameRPC)
+
+print("test user input", rpc)
 
 
-        # intRounds = intRounds + 1
-        #
-        # if boolWinner == True:
-        #     intScore = intScore + 1
+def random_ai():
+    random_num = random.randint(1, 3)
+
+    if random_num == 1:
+        string_rpc = "rock"
+        return string_rpc
+    elif random_num == 2:
+        string_rpc = "paper"
+        return string_rpc
+    elif random_num == 3:
+        string_rpc = "scissors"
+        return string_rpc
+
+
+print("test AI", random_ai())
+
+if rpc == "rock" and random_ai() == "rock":
+    print("the computer chose rock")
+    print("tie")
+elif rpc == "paper" and random_ai() == "paper":
+    print("the computer chose paper")
+    print("tie")
+elif rpc == "scissors" and random_ai() == "scissors":
+    print("the computer chose scissors")
+    print("tie")
+elif rpc == "rock" and random_ai() == "paper":
+    print("the computer chose paper")
+    print("You lose")
+elif rpc == "paper" and random_ai() == "scissors":
+    print("the computer chose scissors")
+    print("You lose")
+elif rpc == "scissors" and random_ai() == "rock":
+    print("the computer chose rock")
+    print("You lose")
+elif rpc == "rock" and random_ai() == "scissors":
+    print("the computer chose scissors")
+    print("You win")
+elif rpc == "paper" and random_ai() == "rock":
+    print("the computer chose rock")
+    print("You win")
+elif rpc == "scissors" and random_ai() == "paper":
+    print("the computer chose paper")
+    print("You win")
+
+
+
+
+
+# intRounds = intRounds + 1
+# if Winner == True:
+# intScore = intScore + 1
 
 
 # intRounds = 0
