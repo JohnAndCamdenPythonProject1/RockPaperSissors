@@ -19,30 +19,36 @@ else:
     print("try again")
     quit()
 
-intRounds = 0
-intScore = 0
 if startGame == 1:
     print("the game is now starting")
-    # while intRounds < inputRounds:
 
-inGameRPC = 0
 inputInGame = input("enter rock paper or scissors: ")
-if inputInGame.lower() == "rock" or "r":
-    inGameRPC = 1
-    print(inGameRPC)
-elif inputInGame.lower() == "paper" or "p":
-    inGameRPC = 2
-    print(inGameRPC)
-elif inputInGame.lower() == "scissors" or "s":
-    inGameRPC = 3
-    print(inGameRPC)
+if inputInGame.lower() == "rock" or inputInGame.lower() == "r":
+    rpc = "rock"
+elif inputInGame.lower() == "paper" or inputInGame.lower() == "p":
+    rpc = "paper"
+elif inputInGame.lower() == "scissors" or inputInGame.lower() == "s":
+    rpc = "scissors"
 else:
     quit()
-
-
+#
+# if rpc == 1:
+#     inGameRPC = "rock"
+# elif rpc == 2:
+#     inGameRPC = "paper"
+# elif rpc == 3:
+#     inGameRPC = "scissors"
+# else:
+#     quit()
+#
+# print(inGameRPC)
 
 
         # intRounds = intRounds + 1
         #
         # if boolWinner == True:
         #     intScore = intScore + 1
+
+
+# intRounds = 0
+# intScore = 0
