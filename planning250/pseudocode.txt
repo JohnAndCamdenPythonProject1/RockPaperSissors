@@ -1,0 +1,17 @@
+Pseudocode/Algorithm Planning Draft1
+
+Start program
+Import random function
+Introduction and instructions to play
+Ask how many rounds the user would like to play (declare intRounds as the constant for the game)
+	Loop rest of program using a counter for X rounds chosen
+	Assign Rock, Paper, and Scissors to a number (Function maybe to call it?)
+	Ask user to input Rock, Paper, Scissors (assign a number value to each to keep simple)
+Have computer randomize between 3 choices (between the numbers assigned to Rock, Paper, Scissors,)
+Use if/elif statements to decide who won
+Nested if statement to decide if a point gets added
+Move on to next round using a loop
+Once X amount of rounds has been completed, end game loop
+Calculate total amount of points possible based on X rounds played
+Create ranking function and call it
+Print to user their result
