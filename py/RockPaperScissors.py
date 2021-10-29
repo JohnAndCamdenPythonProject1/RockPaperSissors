@@ -1,6 +1,9 @@
 #Camden Levy and John Castilloux
 import random
 
+for x in ["Game programmed by Camden and John"]:
+    print(x)
+print()
 print("Rock Paper Scissors game\nCompete against the AI and gain score ")
 print("-----------------------------------------------------------------")
 print("To play competitive Rock Paper Scissors, you must type Play to continue.")
@@ -122,6 +125,7 @@ def scores():
         print("Computer score is", ai_score)
         print("Number of ties", ties)
         print("you are winning ", ((player_score/rounds) * 100), "% of the time")
+
 
 scores()
 
