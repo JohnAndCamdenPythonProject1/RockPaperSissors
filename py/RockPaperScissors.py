@@ -44,7 +44,7 @@ while rounds < inputRounds:     # loops until rounds are equal with number of ro
         quit()
 
 
-    def random_ai():        # random generator assigning number value to rock, paper, or scissor
+    def random_ai():        # random generator assigning number value to rock, paper, or scissors
         random_num = random.randint(1, 3)
         if random_num == 1:
             string_rps = "rock"
