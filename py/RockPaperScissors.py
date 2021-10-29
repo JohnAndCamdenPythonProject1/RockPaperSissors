@@ -28,35 +28,67 @@ if startGame == 1:
 
 inputInGame = input("enter rock paper or scissors: ")
 if inputInGame.lower() == "rock" or inputInGame.lower() == "r":
-    rpc = "rock"
+    rps = "rock"
 elif inputInGame.lower() == "paper" or inputInGame.lower() == "p":
-    rpc = "paper"
+    rps = "paper"
 elif inputInGame.lower() == "scissors" or inputInGame.lower() == "s":
-    rpc = "scissors"
+    rps = "scissors"
 else:
     quit()
-
-print("test user input", rpc)
-
 
 def random_ai():
     random_num = random.randint(1, 3)
 
     if random_num == 1:
-        string_rpc = "rock"
-        return string_rpc
+        string_rps = "rock"
+        return string_rps
     elif random_num == 2:
-        string_rpc = "paper"
-        return string_rpc
+        string_rps = "paper"
+        return string_rps
     elif random_num == 3:
-        string_rpc = "scissors"
-        return string_rpc
+        string_rps = "scissors"
+        return string_rps
 
 
-print("test AI", random_ai())
+rps_AI = random_ai()
+print(rps_AI)
 
 player_score = 0
 ai_score = 0
+
+if rps == "rock" and rps_AI == "rock":
+    print("the computer chose rock")
+    print("tie")
+elif rps == "paper" and rps_AI == "paper":
+    print("the computer chose paper")
+    print("tie")
+elif rps == "scissors" and rps_AI == "scissors":
+    print("the computer chose scissors")
+    print("tie")
+elif rps == "rock" and rps_AI == "paper":
+    print("the computer chose paper")
+    print("You lose")
+    ai_score = ai_score + 1
+elif rps == "paper" and rps_AI == "scissors":
+    print("the computer chose scissors")
+    print("You lose")
+    ai_score = ai_score + 1
+elif rps == "scissors" and rps_AI == "rock":
+    print("the computer chose rock")
+    print("You lose")
+    ai_score = ai_score + 1
+elif rps == "rock" and rps_AI == "scissors":
+    print("the computer chose scissors")
+    print("You win")
+    player_score = player_score + 1
+elif rps == "paper" and rps_AI == "rock":
+    print("the computer chose rock")
+    print("You win")
+    player_score = player_score + 1
+elif rps == "scissors" and rps_AI == "paper":
+    print("the computer chose paper")
+    print("You win")
+    player_score = player_score + 1
 
 
 def scores():
@@ -74,51 +106,4 @@ def scores():
         print("Computer score is", ai_score)
 
 
-if rpc == "rock" and random_ai() == "rock":
-    print("the computer chose rock")
-    print("tie")
-elif rpc == "paper" and random_ai() == "paper":
-    print("the computer chose paper")
-    print("tie")
-elif rpc == "scissors" and random_ai() == "scissors":
-    print("the computer chose scissors")
-    print("tie")
-elif rpc == "rock" and random_ai() == "paper":
-    ai_score += 1
-    print("the computer chose paper")
-    print("You lose")
-elif rpc == "paper" and random_ai() == "scissors":
-    ai_score += 1
-    print("the computer chose scissors")
-    print("You lose")
-elif rpc == "scissors" and random_ai() == "rock":
-    ai_score += 1
-    print("the computer chose rock")
-    print("You lose")
-elif rpc == "rock" and random_ai() == "scissors":
-    player_score += 1
-    print("the computer chose scissors")
-    print("You win")
-elif rpc == "paper" and random_ai() == "rock":
-    player_score += 1
-    print("the computer chose rock")
-    print("You win")
-elif rpc == "scissors" and random_ai() == "paper":
-    player_score += 1
-    print("the computer chose paper")
-    print("You win")
-
-# player_score += 1
-
 scores()
-
-
-
-
-# intRounds = intRounds + 1
-# if Winner == True:
-# intScore = intScore + 1
-
-
-# intRounds = 0
-# intScore = 0
