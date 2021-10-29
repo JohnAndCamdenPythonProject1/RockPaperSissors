@@ -55,6 +55,25 @@ def random_ai():
 
 print("test AI", random_ai())
 
+player_score = 0
+ai_score = 0
+
+
+def scores():
+    if player_score > ai_score:
+        print("Winning")
+        print("Your score is", player_score)
+        print("Computer score is", ai_score)
+    elif ai_score > player_score:
+        print("losing")
+        print("Your score is", player_score)
+        print("Computer score is", ai_score)
+    elif ai_score == player_score:
+        print("equal")
+        print("Your score is", player_score)
+        print("Computer score is", ai_score)
+
+
 if rpc == "rock" and random_ai() == "rock":
     print("the computer chose rock")
     print("tie")
@@ -65,35 +84,33 @@ elif rpc == "scissors" and random_ai() == "scissors":
     print("the computer chose scissors")
     print("tie")
 elif rpc == "rock" and random_ai() == "paper":
+    ai_score += 1
     print("the computer chose paper")
     print("You lose")
 elif rpc == "paper" and random_ai() == "scissors":
+    ai_score += 1
     print("the computer chose scissors")
     print("You lose")
 elif rpc == "scissors" and random_ai() == "rock":
+    ai_score += 1
     print("the computer chose rock")
     print("You lose")
 elif rpc == "rock" and random_ai() == "scissors":
+    player_score += 1
     print("the computer chose scissors")
     print("You win")
 elif rpc == "paper" and random_ai() == "rock":
+    player_score += 1
     print("the computer chose rock")
     print("You win")
 elif rpc == "scissors" and random_ai() == "paper":
+    player_score += 1
     print("the computer chose paper")
     print("You win")
 
 # player_score += 1
 
-def scores():
-    player_score = 0
-    ai_score = 0
-    if player_score > ai_score:
-        print("winning")
-    elif ai_score > player_score:
-        print("losing")
-    elif ai_score == player_score:
-        print("equal")
+scores()
 
 
 
