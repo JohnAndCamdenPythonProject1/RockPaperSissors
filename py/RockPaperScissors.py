@@ -1,7 +1,6 @@
 #Camden Levy and John Castilloux
 import random
 
-
 print("Rock Paper Scissors game\nCompete against the AI and gain score ")
 print("-----------------------------------------------------------------")
 print("To play competitive Rock Paper Scissors, you must type Play to continue.")
@@ -18,13 +17,10 @@ if game == 1:
     inputRounds = int(input("How many rounds would you like to play? "))
 
 if inputRounds > 0:
-    startGame = 1
+    print("the game is now starting")
 else:
     print("try again")
     quit()
-
-if startGame == 1:
-    print("the game is now starting")
 
 inputInGame = input("enter rock paper or scissors: ")
 if inputInGame.lower() == "rock" or inputInGame.lower() == "r":
