@@ -22,7 +22,6 @@ else:
     print("try again")
     quit()
 
-
 rounds = 0
 player_score = 0
 ai_score = 0
@@ -103,28 +102,26 @@ while rounds < inputRounds:
         rounds = rounds + 1
 
 
-# print("test", player_score)
-# print("test", ai_score)
-
 def scores():
+    percent = ((player_score / rounds) * 100)
     if player_score > ai_score:
         print("Winning")
         print("Your score is", player_score)
         print("Computer score is", ai_score)
         print("Number of ties", ties)
-        print("you are winning ", ((player_score/rounds) * 100), "% of the time")
+        print("you are winning ", round(percent, 3), "% of the time")
     elif ai_score > player_score:
         print("losing")
         print("Your score is", player_score)
         print("Computer score is", ai_score)
         print("Number of ties", ties)
-        print("you are winning ", ((player_score/rounds) * 100), "% of the time")
+        print("you are winning ", round(percent, 3), "% of the time")
     elif ai_score == player_score:
         print("equal")
         print("Your score is", player_score)
         print("Computer score is", ai_score)
         print("Number of ties", ties)
-        print("you are winning ", ((player_score/rounds) * 100), "% of the time")
+        print("you are winning ", round(percent, 3), "% of the time")
 
 
 scores()
