@@ -44,7 +44,7 @@ while rounds < inputRounds:     # loops until rounds are equal with number of ro
         quit()
 
 
-    def random_ai():        # random generator assigning number value to rock, paper, or scissors
+    def random_ai():        # random generator assigning number value to rock, paper, or scissor
         random_num = random.randint(1, 3)
         if random_num == 1:
             string_rps = "rock"
@@ -118,18 +118,21 @@ while rounds < inputRounds:     # loops until rounds are equal with number of ro
 def scores():      # function that compiles player scores & win/lose ratio at end of the entire game
     percent = ((player_score / rounds) * 100)
     if player_score > ai_score:
+        print("Total games played:", inputRounds)
         print("You won")
         print("Your score is", player_score)
         print("Computer score is", ai_score)
         print("Number of ties", ties)
         print("You are winning ", round(percent, 3), "% of the time")
     elif ai_score > player_score:
+        print("Total games played:", inputRounds)
         print("You lost")
         print("Your score is", player_score)
         print("Computer score is", ai_score)
         print("Number of ties", ties)
         print("you are winning ", round(percent, 3), "% of the time")
     elif ai_score == player_score:
+        print("Total games played:", inputRounds)
         print("The score is equal, no winner")
         print("Your score is", player_score)
         print("Computer score is", ai_score)
