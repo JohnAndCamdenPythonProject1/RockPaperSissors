@@ -19,7 +19,11 @@ else:
     print("try again")
     quit()
 
+
 rounds = 0
+player_score = 0
+ai_score = 0
+ties = 0
 
 while rounds < inputRounds:
     inputInGame = input("enter rock paper or scissors: ")
@@ -49,58 +53,76 @@ while rounds < inputRounds:
     rps_AI = random_ai()
     print(rps_AI)
 
-    player_score = 0
-    ai_score = 0
-
     if rps == "rock" and rps_AI == "rock":
         print("the computer chose rock")
         print("tie")
+        ties = ties +1
+        rounds = rounds + 1
     elif rps == "paper" and rps_AI == "paper":
         print("the computer chose paper")
         print("tie")
+        ties = ties +1
+        rounds = rounds + 1
     elif rps == "scissors" and rps_AI == "scissors":
         print("the computer chose scissors")
         print("tie")
+        ties = ties + 1
+        rounds = rounds + 1
     elif rps == "rock" and rps_AI == "paper":
         print("the computer chose paper")
         print("You lose")
         ai_score = ai_score + 1
+        rounds = rounds + 1
     elif rps == "paper" and rps_AI == "scissors":
         print("the computer chose scissors")
         print("You lose")
         ai_score = ai_score + 1
+        rounds = rounds + 1
     elif rps == "scissors" and rps_AI == "rock":
         print("the computer chose rock")
         print("You lose")
         ai_score = ai_score + 1
+        rounds = rounds + 1
     elif rps == "rock" and rps_AI == "scissors":
         print("the computer chose scissors")
         print("You win")
         player_score = player_score + 1
+        rounds = rounds + 1
     elif rps == "paper" and rps_AI == "rock":
         print("the computer chose rock")
         print("You win")
         player_score = player_score + 1
+        rounds = rounds + 1
     elif rps == "scissors" and rps_AI == "paper":
         print("the computer chose paper")
         print("You win")
         player_score = player_score + 1
+        rounds = rounds + 1
 
 
-    def scores():
-        if player_score > ai_score:
-            print("Winning")
-            print("Your score is", player_score)
-            print("Computer score is", ai_score)
-        elif ai_score > player_score:
-            print("losing")
-            print("Your score is", player_score)
-            print("Computer score is", ai_score)
-        elif ai_score == player_score:
-            print("equal")
-            print("Your score is", player_score)
-            print("Computer score is", ai_score)
+# print("test", player_score)
+# print("test", ai_score)
+
+def scores():
+    if player_score > ai_score:
+        print("Winning")
+        print("Your score is", player_score)
+        print("Computer score is", ai_score)
+        print("Number of ties", ties)
+        print("you are winning ", ((player_score/rounds) * 100), "% of the time")
+    elif ai_score > player_score:
+        print("losing")
+        print("Your score is", player_score)
+        print("Computer score is", ai_score)
+        print("Number of ties", ties)
+        print("you are winning ", ((player_score/rounds) * 100), "% of the time")
+    elif ai_score == player_score:
+        print("equal")
+        print("Your score is", player_score)
+        print("Computer score is", ai_score)
+        print("Number of ties", ties)
+        print("you are winning ", ((player_score/rounds) * 100), "% of the time")
+
+scores()
 
 
-    scores()
-    rounds = rounds + 1
