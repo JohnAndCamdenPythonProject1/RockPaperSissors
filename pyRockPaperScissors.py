@@ -1,18 +1,18 @@
 #Camden Levy and John Castilloux
 import random
 
-AUTHOR1 = "Camden"        # constants
+AUTHOR1 = "Camden"        # constants (John)
 AUTHOR2 = "John"
 
-for x in "Game programmed by", AUTHOR1, AUTHOR2:            # for loop to begin
+for x in "Game programmed by", AUTHOR1, AUTHOR2:            # for loop to begin (John/Camden)
     print(x)
 print("------------------------------------")
-print("Rock Paper Scissors game\nCompete against the AI and gain score ")       # starting messages
+print("Rock Paper Scissors game\nCompete against the AI and gain score ")       # starting messages (Camden)
 print("-----------------------------------------------------------------")
 print("To play competitive Rock Paper Scissors, you must type Play to continue.")
 
 input1 = input("Type play to begin ")       # play input
-if input1.lower() == "Play" or "P":        # parses through user input to start the game
+if input1.lower() == "Play" or "P":        # parses through user input to start the game (Camden)
     print("Game Begins")
     print("-----------------------------")
     inputRounds = int(input("How many rounds would you like to play? "))    # input number of rounds you want to play
@@ -27,13 +27,13 @@ else:
     print("Try again")
     quit()
 
-rounds = 0          # declare variables
+rounds = 0          # declare variables (Camden)
 player_score = 0
 ai_score = 0
 ties = 0
 
-while rounds < inputRounds:     # loops until rounds are equal with number of rounds inputted by user
-    inputInGame = input("Enter rock paper or scissors: ")        # user input with no case sensitivity
+while rounds < inputRounds:     # loops until rounds are equal with number of rounds inputted by user (John)
+    inputInGame = input("Enter rock paper or scissors: ")        # user input with no case sensitivity (Camden)
     if inputInGame.lower() == "rock" or inputInGame.lower() == "r":
         rps = "rock"
     elif inputInGame.lower() == "paper" or inputInGame.lower() == "p":
@@ -44,7 +44,7 @@ while rounds < inputRounds:     # loops until rounds are equal with number of ro
         quit()
 
 
-    def random_ai():        # random generator assigning number value to rock, paper, or scissor
+    def random_ai():        # random generator assigning number value to rock, paper, or scissor (John/Camden)
         random_num = random.randint(1, 3)
         if random_num == 1:
             string_rps = "rock"
@@ -59,7 +59,7 @@ while rounds < inputRounds:     # loops until rounds are equal with number of ro
 
     rps_AI = random_ai()       # grabs result from random_ai function
 
-    if rps == "rock" and rps_AI == "rock":      # game logic, win/lose/tie for each possible combo
+    if rps == "rock" and rps_AI == "rock":      # game logic, win/lose/tie for each possible combo (Camden)
         print("The computer chose rock")
         print("Tie")
         print("---------------------------------------")
@@ -115,7 +115,7 @@ while rounds < inputRounds:     # loops until rounds are equal with number of ro
         rounds = rounds + 1
 
 
-def scores():      # function that compiles player scores & win/lose ratio at end of the entire game
+def scores():      # function that compiles player scores & win/lose ratio at end of the entire game (Camden)
     percent = ((player_score / rounds) * 100)
     if player_score > ai_score:
         print("Total games played:", inputRounds)
@@ -143,5 +143,5 @@ def scores():      # function that compiles player scores & win/lose ratio at en
 scores()       # prints scores function after while loop finishes all rounds
 
 print("----------------------------------------")
-print("Developed by", AUTHOR1, "and", AUTHOR2)     # end note for player
+print("Developed by", AUTHOR1, "and", AUTHOR2)     # end note for player (John)
 
